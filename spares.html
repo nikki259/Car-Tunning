@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/my logo2.png" />
+</head>
+<body>
+<div class="bg">
+      <!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="images/my logo2.PNG" width="100px" height="30px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="tuning.html">Tuning</a>
+                      </li>
+                      <li class="nav-item active">
+                            <a class="nav-link" href="spares.html">Spares</a>
+                      </li>
+                    <li class="nav-item">
+                              <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid padding text-center">
+        <div class="row padding text-center">
+            <div class="col-12">
+                <h4>Tyres</h4>
+            </div>
+            <div class="col-sm-3">
+                    <img class="gif" src="images/tyre1.PNG">
+                </div>
+                <div class="col-sm-3">
+                        <img class="gif" src="images/tyre2.PNG">
+                    </div>
+                    <div class="col-sm-3">
+                            <img class="gif" src="images/tyre3.PNG">
+                        </div>
+                        <div class="col-sm-3">
+                                <img class="gif" src="images/tyre4.PNG">
+                            </div>
+                                        <div class="col-md-12">
+                                                <button class="show1" id="hide1" onclick="show1();">More</button>
+                                                
+                                            </div>
+        </div>
+    </div>
+    <div class="container-fluid padding text-center" id="tyr1">
+            <div class="row padding text-center">
+                    <div class="col-sm-3">
+                            <img class="gif" src="images/tyre5.PNG">
+                        </div>
+                        <div class="col-sm-3">
+                                <img class="gif" src="images/tyre6.PNG">
+                            </div>
+                            <div class="col-sm-3">
+                                    <img class="gif" src="images/tyre7.PNG">
+                                </div>
+                                <div class="col-sm-3">
+                                        <img class="gif" src="images/tyre8.PNG">
+                                    </div>
+            </div>
+        </div>
+
+            <script>          
+               $(document).ready(function(){
+                                    $('.show1').on('click' , function show1()
+                                           {
+                                  
+                                                    $("#tyr1").show();
+                                                    $("#hide1").hide();
+                                                    
+                                                });
+                                           }
+                                   );
+            </script>
+
+<div>
+    <hr class="light-10">
+</div>
+
+            <div class="container-fluid padding text-center">
+                    <div class="row padding text-center">
+                        <div class="col-12">
+                            <h4>Bumpers and Doors</h4>
+                        </div>
+                        <div class="col-sm-3">
+                                <img class="gif" src="images/bum1.PNG">
+                            </div>
+                            <div class="col-sm-3">
+                                    <img class="gif" src="images/door1.PNG">
+                                </div>
+                                <div class="col-sm-3">
+                                        <img class="gif" src="images/bum2.PNG">
+                                    </div>
+                                    <div class="col-sm-3">
+                                            <img class="gif" src="images/bum3.PNG">
+                                        </div>
+                                                    <div class="col-md-12">
+                                                            <button class="show2" id="hide2" onclick="show2();">More</button>
+                                                            
+                                                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid padding text-center" id="tyr2">
+                        <div class="row padding text-center">
+                                <div class="col-sm-3">
+                                        <img class="gif" src="images/door2.PNG">
+                                    </div>
+                                    <div class="col-sm-3">
+                                            <img class="gif" src="images/door3.PNG">
+                                        </div>
+                                        <div class="col-sm-3">
+                                                <img class="gif" src="images/bum4.PNG">
+                                            </div>
+                                            <div class="col-sm-3">
+                                                    <img class="gif" src="images/door4.PNG">
+                                                </div>
+                        </div>
+                    </div>
+            
+                        <script>          
+                           $(document).ready(function(){
+                                                $('.show2').on('click' , function show2()
+                                                       {
+                                              
+                                                                $("#tyr2").show();
+                                                                $("#hide2").hide();
+                                                            });
+                                                       }
+                                               );
+                        </script>
+
+<div>
+        <hr class="light-10">
+    </div>
+
+    <div class="container-fluid padding text-center">
+            <div class="row padding text-center">
+                <div class="col-12">
+                    <h4>Head Lights</h4>
+                </div>
+                <div class="col-sm-3">
+                        <img class="gif" src="images/light1.PNG">
+                    </div>
+                    <div class="col-sm-3">
+                            <img class="gif" src="images/light2.png">
+                        </div>
+                        <div class="col-sm-3">
+                                <img class="gif" src="images/light3.png">
+                            </div>
+                            <div class="col-sm-3">
+                                    <img class="gif" src="images/light4.png">
+                                </div>
+                                            <div class="col-md-12">
+                                                    <button class="show3" id="hide3"  onclick="show3();">More</button>
+                                                    
+                                                </div>
+            </div>
+        </div>
+        <div class="container-fluid padding text-center" id="tyr3">
+                <div class="row padding text-center">
+                        <div class="col-sm-3">
+                                <img class="gif" src="images/light5.png">
+                            </div>
+                            <div class="col-sm-3">
+                                    <img class="gif" src="images/light6.png">
+                                </div>
+                                <div class="col-sm-3">
+                                        <img class="gif" src="images/light7.png">
+                                    </div>
+                                    <div class="col-sm-3">
+                                            <img class="gif" src="images/light8.png">
+                                        </div>
+                </div>
+            </div>
+    
+                <script>          
+                   $(document).ready(function(){
+                                        $('.show3').on('click' , function show3()
+                                               {
+                                      
+                                                        $("#tyr3").show();
+                                                        $("#hide3").hide();
+                                                    });
+                                               }
+                                       );
+                </script>
+        
+    
+ <!--- Footer -->
+<footer id="contact">
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h2>Email Subscription</h2>
+                    <hr class="light">
+                    <p>Subscribe to our email newsletter for useful tips and latest newss</p>
+                    <script>
+                            function email_sub(){
+                          alert("You have successfully subscribed !!")
+                            }
+                        </script>
+                        <br>
+                    <div class="input-group">
+                            <form method="GET"  onSubmit="email_sub()" action="#">
+                                <ul class="ul">
+                                    <li class="li1">
+                                        <input type="email" class="form-control" required=required placeholder="@yourmail.com" aria-label="Recipient's username" aria-describedby="basic-addon2">
+    
+                                    </li>
+                                    <li class="li2">
+                                        <input class="btn btn-primary" type="submit" value="submit" id="sub"/>
+    
+                                    </li>
+                                </ul>
+                          </div>
+                        </form>
+                </div>
+                <div class="col-md-4">
+                    <h2>Our Hours</h2>
+                    <hr class="light">
+                    <p>Mon - Fri : 9am - 5pm</p>
+                    <p>saturday  : 10am - 4pm</p>
+                    <p>Sunday    : closed</p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Our Company</h2>
+                    <hr class="light">
+                    <p>Garage Simulator, INC</p>
+                    <p>NIIT University</p>
+                    <p>Olive Street</p>
+                    <p>Neemrana , Rajasthan</p>
+                    <p>PH - 9602521864</p>
+                    <P>www.garagesimulator.com</P>
+                </div>
+                <div class="col-12">
+                    <hr class="light-100">
+                    <h5>&copy; garagesimulator.com</h5>
+                </div>
+            </div>
+        </div>
+    </footer>  
+</div>     
+</body>
+</html>

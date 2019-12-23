@@ -1,0 +1,28 @@
+<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+        <button type="button" class="navbar-toogle"
+        data-toogle="collapse"
+        data-target=".navbar-collapse">
+            <span class="sr-only">Toogle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+         </button>
+                <a class="navbar-brand">Gaurage Simulator</a>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-bav navbar-right">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Tuning</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Brands</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+    </div>
+</nav>
+
+<video autoplay muted loop>
+        <source src="Mercedes Cars Road Trip.mp4" type="video/mp4">
+    </video>

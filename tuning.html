@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Complete Bootstrap 4 Website Layout</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js">
+    </script>  
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script> 
+    <link rel="shortcut icon" href="images/my logo2.png" />
+
+</head>
+<body>
+
+     <!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="images/my logo2.PNG" width="100px" height="30px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                        <a class="nav-link" href="tuning.html">Tuning</a>
+                  </li>
+                  <li class="nav-item">
+                        <a class="nav-link" href="spares.html">Spares</a>
+                  </li>
+                <li class="nav-item">
+                          <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <h4>Start Here &#8628;</h4>
+</div>
+
+            <div class="container padding tun-menu">
+                <div class="row padding">
+                    <div class="col-md-3 col-sm-12">
+                            <select name="btn1" id="btn1" class="select">
+                                <option selected disabled class="option">Year</option>
+                                    <option value="2018" class="option">2018</option>
+                                    <option value="2017" class="option">2017</option>
+                                    <option value="2016" class="option">2016</option>
+                                    <option value="2015" class="option">2015</option>
+                                  </select>
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                     $('#btn1').on('click' , function()
+                            {
+                                 if(this.value=='2018' )
+                                 {
+                                        $("#btn2").show();
+                                        $(document).ready(function(){
+                     $('#btn2').on('click' , function()
+                            {
+                                 if(this.value=='Audi' || this.value=='landrover' || this.value=='Jaguar'|| this.value=='BMW' )
+                                 {
+                                        $("#btn3").show();
+                                        $(".dropbtn").show();
+                                 }
+                                 else{
+                                     $("#btn3").hide();
+                                    }
+                                 });
+                            }
+                    );
+                                    
+                                 }
+                                 else{
+                                     $("#btn2").hide();
+                                     $("#btn3").hide();
+                                     $(".dropbtn").hide();
+                                    }
+                                 });
+                            }
+                    );
+                    $("#btn2").change(function() {
+              if ($(this).data('options') === undefined) {
+                /*Taking an array of all options-2 and kind of embedding it on the select1*/
+                $(this).data('options', $('#btn3 option').clone());
+              }
+              var id = $(this).val();
+              var options = $(this).data('options').filter('[value=' + id + ']');
+              $('#btn3').html(options);
+            });
+                </script>
+              <div class="col-md-3">
+                    <select class="select"  name="btn2" id= "btn2" onchange="populate(this.id,'btn3')">
+                            <option disabled selected value> brand 
+                            </option>
+                            <option value="Audi">Audi
+                            </option>
+                             <option value="landrover">landrover
+                            </option> 
+                            <option value="Jaguar">Jaguar
+                            </option>
+                            <option value="BMW">BMW
+                            </option>
+                          </select>
+            </div>
+            <div class="col-md-3">
+                    <select class="select"  name="btn3" id= "btn3">    
+                        </select>
+                   
+            </div>
+            
+            <script>
+                    function populate(s1,s2){
+                      var s1 = document.getElementById(s1);
+                      var s2 = document.getElementById(s2);
+                      s2.innerHTML = "";
+                      if(s1.value == "Audi"){
+                        var optionArray = ["Audi1|Audi1","Audi2|Audi2","Audi3|Audi3"];
+                      }
+                      else if(s1.value == "landrover"){
+                        var optionArray = ["landrover1|landrover1","landrover2|landrover2"];
+                      }
+                      else if(s1.value == "Jaguar"){
+                        var optionArray = ["Jaguar1|Jaguar1","Jaguar2|Jaguar2"];
+                      }
+                      else if(s1.value == "BMW"){
+                        var optionArray = ["BMW1|BMW1"];
+                      }
+                      for(var option in optionArray){
+                        var pair = optionArray[option].split("|");
+                        var newOption = document.createElement("option");
+                        newOption.value = pair[0];
+                        newOption.innerHTML = pair[1];
+                        s2.options.add(newOption);
+                      }
+                    }
+                  </script>
+            
+              
+                 <div class="col-md-3">
+                            <button class="dropbtn"  onclick="random_image3();">Start Tuning</button>   
+                            
+                        </div>
+                </div>
+            </div>
+            <br>
+            <script>
+                
+                
+                    $(document).ready(function(){
+                                    $('.dropbtn').on('click' , function random_image3()
+                                           {
+                                  
+                                                    $("#color").show();
+                                                    var year=document.getElementById("btn1").value;
+                                                    var brand=document.getElementById("btn2").value;
+                                                    var model=document.getElementById("btn3").value;
+                                                    var final = year+"-"+brand+"-"+model+"-"+"black" ; 
+                                                    var img=document.getElementById('randomImage');  
+                                                    img.src="images/"+ final+ ".png"; 
+                                                });
+                                           }
+                                   );
+                                   $(document).ready(function(){
+                                    $('#red').on('click' , function random_image()
+                                           {
+                                            var year=document.getElementById("btn1").value;
+                                            var brand=document.getElementById("btn2").value;
+                                            var model=document.getElementById("btn3").value;
+                                            var fin_one = year+"-"+brand+"-"+model+"-"+"red" ; 
+                                            var img=document.getElementById('randomImage');  
+                                            img.src="images/"+ fin_one+ ".png"; 
+                                                                                                                       
+                                                });
+                                           }
+                                   );
+                                   $(document).ready(function(){
+                                    $('#blue').on('click' , function random_image1()
+                                           {
+                                            var year=document.getElementById("btn1").value;
+                                            var brand=document.getElementById("btn2").value;
+                                            var model=document.getElementById("btn3").value;
+                                            var fin_one = year+"-"+brand+"-"+model+"-"+"blue" ;     
+                                            var img=document.getElementById('randomImage');  
+                                            img.src="images/"+ fin_one+ ".png";                                        
+                                                });
+                                           }
+                                   );
+                                   $(document).ready(function(){
+                                    $('#black').on('click' , function random_image2()
+                                           {
+                                            var year=document.getElementById("btn1").value;
+                                            var brand=document.getElementById("btn2").value;
+                                            var model=document.getElementById("btn3").value;   
+                                            var fin_one = year+"-"+brand+"-"+model+"-"+"black" ;
+                                            var img=document.getElementById('randomImage');  
+                                            img.src="images/"+ fin_one+ ".png"; 
+                                                });
+                                           }
+                                   );
+                </script>
+            <div class="container padding">
+                <div class="tun-container">
+                    <div class="tun-img"  >
+                            <img class="img-fluid "  src="images/meter.jpg" id="randomImage">
+                    </div>
+                    
+                </div>
+            </div>
+            
+
+            <div class="container padding" id="color">
+                <div>
+                    <h5>Colors</h5>
+                    <div class="row padding color">
+                        <div class="col-sm-2 color1" id="red" name="red" onclick="random_image();">
+                        
+                        </div>
+                        <div class="col-sm-2 color2" id="blue" name="blue" onclick="random_image1();">
+                            
+                            </div>
+                            <div class="col-sm-2 color3" id="black" name="black" onclick="random_image2();">
+                            
+                                </div>
+                    </div>
+                </div>
+            </div>
+
+    
+
+
+
+
+<div>
+    <hr class="my-4">
+</div>
+<!--- Connect -->
+<div class="container-fluid padding"id ="about">
+        <div class="row text-center padding">
+            <div class="col-12">
+                <h2>Connect</h2>
+            </div>
+            <div class="col-12 social padding">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+<!--- Footer -->
+<footer id="contact">
+    <div class="container-fluid padding">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h2>Email Subscription</h2>
+                <hr class="light">
+                <p>Subscribe to our email newsletter for useful tips and latest newss</p>
+                <script>
+                        function email_sub(){
+                      alert("You have successfully subscribed !!")
+                        }
+                    </script>
+                    <br>
+                <div class="input-group">
+                        <form method="GET"  onSubmit="email_sub()" action="#">
+                            <ul class="ul">
+                                <li class="li1">
+                                    <input type="email" class="form-control" required=required placeholder="@yourmail.com" aria-label="Recipient's username" aria-describedby="basic-addon2">
+
+                                </li>
+                                <li class="li2">
+                                    <input class="btn btn-primary" type="submit" value="submit" id="sub"/>
+
+                                </li>
+                            </ul>
+                      </div>
+                    </form>
+            </div>
+            <div class="col-md-4">
+                <h2>Our Hours</h2>
+                <hr class="light">
+                <p>Mon - Fri : 9am - 5pm</p>
+                <p>saturday  : 10am - 4pm</p>
+                <p>Sunday    : closed</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Our Company</h2>
+                <hr class="light">
+                <p>Garage Simulator, INC</p>
+                <p>NIIT University</p>
+                <p>Olive Street</p>
+                <p>Neemrana , Rajasthan</p>
+                <p>PH - 9602521864</p>
+                <P>www.garagesimulator.com</P>
+            </div>
+            <div class="col-12">
+                <hr class="light-100">
+                <h5>&copy; garagesimulator.com</h5>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!--- Check out my course on Udemy! -->
+<!-- <div class="udemy-course" style="position: fixed; bottom: 0; right: 0; margin-bottom: -5px; z-index: 100;">
+	<a href="http://bit.ly/advanced-bootstrap-course" target="_blank" style="z-index: 999!important; cursor: pointer!important;"><img src="https://www.w3newbie.com/wp-content/uploads/nuno-udemy-banner.png" style="max-width: 100%; min-width: 100%;"></a>
+</div> -->
+
+
